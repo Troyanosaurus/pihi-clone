@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Biba Asia — Philippines | Tours & Local Support</title>
+  <meta name="description" content="Biba Asia — Philippines: Portuguese & English support, curated island tours (Palawan, Boracay, Siargao, Cebu), transfers, diving, photography and custom itineraries." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Biba Asia — Philippines" />
+  <meta property="og:description" content="Curated island tours, local support and travel guides for Portuguese & English speakers." />
+  <meta property="og:image" content="assets/og-philippines.jpg" />
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="assets/favicon.png" />
+  <style>
+    /* Minimal, modern styling — customize colors / fonts */
+    :root {
+      --accent: #f59e0b; /* warm yellow */
+      --dark: #0f172a;
+      --muted: #64748b;
+      --card-bg: #ffffff;
+      --maxw: 1100px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body { margin:0; background:#f8fafc; color:var(--dark); }
+    .wrap { max-width:var(--maxw); margin:0 auto; padding:20px; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0; }
+    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit; }
+    .brand img { width:48px; height:48px; border-radius:8px; object-fit:cover; }
+    nav ul { list-style:none; display:flex; gap:12px; margin:0; padding:0; align-items:center; }
+    a.btn { background:var(--accent); color:white; padding:10px 14px; border-radius:8px; text-decoration:none; font-weight:600; }
+    .hero { display:grid; grid-template-columns:1fr 420px; gap:24px; align-items:center; margin:24px 0; }
+    .hero .lead { font-size:28px; line-height:1.05; font-weight:700; }
+    .hero p { color:var(--muted); margin-top:8px; }
+    .card { background:var(--card-bg); border-radius:12px; box-shadow:0 6px 18px rgba(15,23,42,0.06); padding:18px; }
+    .tours { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:18px; }
+    .tour img { width:100%; height:140px; object-fit:cover; border-radius:8px; }
+    .grid-2 { display:grid; grid-template-columns:1fr 320px; gap:18px; align-items:start; margin-top:18px; }
+    .blog-list { display:grid; gap:12px; margin-top:12px; }
+    footer { text-align:center; color:var(--muted); padding:28px 0; margin-top:28px; }
+    .whatsapp-fab { position:fixed; right:18px; bottom:18px; z-index:60; }
+    @media (max-width:880px) {
+      .hero { grid-template-columns:1fr; }
+      .grid-2 { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <a class="brand" href="/">
+      <img src="assets/logo.png" alt="Biba Asia logo" />
+      <div>
+        <div style="font-weight:700">Biba Asia</div>
+        <div style="font-size:12px;color:var(--muted)">Philippines — Local tours & support</div>
+      </div>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="#tours">Tours</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#blog">Guides</a></li>
+        <li><a href="#contact" class="btn">Contact / WhatsApp</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="card">
+          <div class="lead">Discover the Philippines — islands, beaches & local experiences</div>
+          <p>Personalized island tours (Palawan, Boracay, Siargao, Cebu, Bohol), diving and transfers with English & Portuguese support. We help plan, book and guide your trip from arrival to departure.</p>
+          <div style="margin-top:12px;display:flex;gap:8px;">
+            <a class="btn" href="#tours">See Tours</a>
+            <a href="#guides" style="padding:10px 14px;border-radius:8px;border:1px solid #e6e9ef;text-decoration:none;color:var(--dark)">Download Guides (PDF)</a>
+          </div>
+          <ul style="margin-top:14px;color:var(--muted); font-size:14px;">
+            <li>Portuguese & English support before and during the trip</li>
+            <li>Local office & trusted partners across islands</li>
+            <li>Custom itineraries, photography and wedding packages</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h4 style="margin:0 0 8px 0">Quick booking</h4>
+        <form id="bookingForm" onsubmit="handleBooking(event)">
+          <label style="font-size:13px;color:var(--muted)">Name</label><br/>
+          <input required name="name" placeholder="Your name" style="width:100%;padding:8px;margin:6px 0;border-radius:8px;border:1px solid #e6e9ef" />
+          <label style="font-size:13px;color:var(--muted)">Destination</label><br/>
+          <select name="destination" style="width:100%;padding:8px;margin:6px 0;border-radius:8px;border:1px solid #e6e9ef">
+            <option>Palawan</option>
+            <option>Boracay</option>
+            <option>Siargao</option>
+            <option>Cebu</option>
+            <option>Bohol</option>
+          </select>
+          <label style="font-size:13px;color:var(--muted)">Date</label><br/>
+          <input type="date" name="date" style="width:100%;padding:8px;margin:6px 0;border-radius:8px;border:1px solid #e6e9ef" />
+          <button class="btn" style="width:100%;margin-top:8px">Request Info</button>
+        </form>
+        <p style="font-size:13px;color:var(--muted);margin-top:10px">WhatsApp response usually within a few hours.</p>
+      </aside>
+    </section>
+
+    <!-- TOURS -->
+    <section id="tours" style="margin-top:8px">
+      <div style="display:flex;justify-content:space-between;align-items:end">
+        <h2>Popular Tours</h2>
+        <a href="#tours" style="font-size:14px;color:var(--muted)">View all tours →</a>
+      </div>
+
+      <div class="tours">
+        <!-- Card 1 -->
+        <article class="card tour">
+          <img src="assets/palawan.jpg" alt="Palawan island" />
+          <h3>Palawan — El Nido & Coron</h3>
+          <p style="color:var(--muted);font-size:14px">Island hopping, lagoons & snorkeling. Private and group options available.</p>
+          <a class="btn" href="#contact" style="margin-top:8px;display:inline-block">Book</a>
+        </article>
+
+        <article class="card tour">
+          <img src="assets/boracay.jpg" alt="Boracay beach" />
+          <h3>Boracay — Beach & Nightlife</h3>
+          <p style="color:var(--muted);font-size:14px">Relax on White Beach, water sports and island sunset cruises.</p>
+          <a class="btn" href="#contact" style="margin-top:8px;display:inline-block">Book</a>
+        </article>
+
+        <article class="card tour">
+          <img src="assets/siargao.jpg" alt="Siargao waves" />
+          <h3>Siargao — Surf & Island Hopping</h3>
+          <p style="color:var(--muted);font-size:14px">Surf lessons, Sugba Lagoon, Sohoton caves and island hopping packages.</p>
+          <a class="btn" href="#contact" style="margin-top:8px;display:inline-block">Book</a>
+        </article>
+
+        <article class="card tour">
+          <img src="assets/cebu.jpg" alt="Cebu waterfall" />
+          <h3>Cebu & Bohol — Waterfalls & Chocolate Hills</h3>
+          <p style="color:var(--muted);font-size:14px">Canyoneering, dolphin watching and cultural tours.</p>
+          <a class="btn" href="#contact" style="margin-top:8px;display:inline-block">Book</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICES + Guides -->
+    <section id="services" class="grid-2">
+      <div>
+        <h3>Services</h3>
+        <div class="card" style="margin-top:8px">
+          <ul style="margin:0;padding-left:18px;color:var(--muted)">
+            <li>Transfers (airport, ferries & private boats)</li>
+            <li>Diving & snorkeling with local instructors</li>
+            <li>Photography & event packages (weddings, proposals)</li>
+            <li>Custom itinerary planning & route consulting</li>
+            <li>Portuguese & English speaking assistance</li>
+          </ul>
+        </div>
+
+        <h3 style="margin-top:14px">Guides & PDFs</h3>
+        <div class="card blog-list">
+          <article>
+            <strong>How to get to El Nido from Manila</strong>
+            <p style="margin:6px 0;color:var(--muted);font-size:14px">Transport options, timings and recommended hotels.</p>
+            <a href="#blog" style="font-size:13px">Read more →</a>
+          </article>
+
+          <article>
+            <strong>Philippines Travel Checklist (PDF)</strong>
+            <p style="margin:6px 0;color:var(--muted);font-size:14px">Visa, health, packing and safety tips. Download our free PDF guide.</p>
+            <a href="assets/philippine-guide.pdf" download style="font-size:13px">Download PDF</a>
+          </article>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h4>Testimonials</h4>
+        <p style="font-size:14px;color:var(--muted)">"Amazing island hopping with local guides — felt taken care of the whole trip." — Amanda</p>
+        <p style="font-size:14px;color:var(--muted)">"Great Portuguese support — booking and diving were flawless." — Mónica</p>
+        <div style="margin-top:10px">
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </aside>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" style="margin-top:20px">
+      <h3>Latest Articles & Tips</h3>
+      <div class="blog-list">
+        <div class="card">
+          <strong>Top 7 Beaches in Palawan</strong>
+          <p style="color:var(--muted)">What to see, when to go and how to book responsibly.</p>
+        </div>
+        <div class="card" style="margin-top:12px">
+          <strong>Do's & Don'ts for Island Hopping</strong>
+          <p style="color:var(--muted)">Local etiquette, safety and protecting marine life.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" style="margin-top:20px">
+      <div class="card">
+        <h3>Contact / WhatsApp</h3>
+        <p style="color:var(--muted)">Message us on WhatsApp for fast replies, or send an email.</p>
+        <p><strong>WhatsApp:</strong> <a id="waLink" href="https://wa.me/5511999999999" target="_blank">Chat with us</a></p>
+        <p><strong>Email:</strong> hello@bibaasia-ph.com</p>
+        <p style="font-size:13px;color:var(--muted)">We also host a WhatsApp group for travelers — click to join.</p>
+        <a href="https://chat.whatsapp.com/your-group-link" target="_blank">Join group →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <small>© <span id="year"></span> Biba Asia — Philippines. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <div class="whatsapp-fab">
+    <a id="waFab" href="https://wa.me/5511999999999" target="_blank" aria-label="WhatsApp">
+      <img src="assets/whatsapp-icon.png" alt="WhatsApp" style="width:64px;height:64px;display:block" />
+    </a>
+  </div>
+
+  <script>
+    // Small client-side interactions
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function handleBooking(e) {
+      e.preventDefault();
+      const data = new FormData(e.target);
+      const name = data.get('name');
+      const dest = data.get('destination');
+      const date = data.get('date');
+      // opens WhatsApp with prefilled message (customize phone number)
+      const phone = '64211532610'; // << REPLACE with your phone
+      const text = encodeURIComponent(`Hi! I'm ${name}. Interested in ${dest} on ${date || 'flexible dates'}. Please send details.`);
+      window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+    }
+  </script>
+</body>
+</html>
